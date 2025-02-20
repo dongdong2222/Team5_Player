@@ -14,13 +14,26 @@ class TEAM5_PLAYER_API UNightCharacterDataAsset : public UPrimaryDataAsset
 {
 	GENERATED_BODY()
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float GetHealth() const;
+	void SetHealth(float value);
+
+	float GetMaxHealth() const;
+	void SetMaxHealth(float value);
+
+	float GetDefence() const;
+	void SetDefence(float value);
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Health;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//¹æ¾î·Â
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Defence;
+
+
 	
 };

@@ -14,12 +14,13 @@ class TEAM5_PLAYER_API ANightCharacterBase : public ACharacter
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	UNightCharacterDataAsset* StetData;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Stat")
+	UNightCharacterDataAsset* StatData;
 public:
 	// Sets default values for this character's properties
 	ANightCharacterBase();
 
-
+	void Test();
+	
 
 };
